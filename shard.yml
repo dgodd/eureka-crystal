@@ -1,0 +1,7 @@
+name: eureka
+version: 0.1.0
+
+authors:
+  - Steel Toe Team <steeltoe@pivotal.io>
+
+license: MIT
