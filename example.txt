@@ -1,0 +1,113 @@
+ 2016-10-06 14:03:27 ☆  |2.3.1| dorchester in ~/Downloads/eureka-client
+○ → curl -i localhost:8761/eureka/apps
+HTTP/1.1 200
+Content-Type: application/xml
+Transfer-Encoding: chunked
+Date: Thu, 06 Oct 2016 18:03:35 GMT
+
+<applications>
+  <versions__delta>1</versions__delta>
+  <apps__hashcode>DOWN_1_UP_2_</apps__hashcode>
+  <application>
+    <name>COOKIE</name>
+    <instance>
+      <instanceId>dorchester.ny.pivotallabs.com:cookie:9001</instanceId>
+      <hostName>dorchester.ny.pivotallabs.com</hostName>
+      <app>COOKIE</app>
+      <ipAddr>10.56.2.21</ipAddr>
+      <status>UP</status>
+      <overriddenstatus>UNKNOWN</overriddenstatus>
+      <port enabled="true">9001</port>
+      <securePort enabled="false">443</securePort>
+      <countryId>1</countryId>
+      <dataCenterInfo class="com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo">
+        <name>MyOwn</name>
+      </dataCenterInfo>
+      <leaseInfo>
+        <renewalIntervalInSecs>30</renewalIntervalInSecs>
+        <durationInSecs>90</durationInSecs>
+        <registrationTimestamp>1475776960333</registrationTimestamp>
+        <lastRenewalTimestamp>1475776960333</lastRenewalTimestamp>
+        <evictionTimestamp>0</evictionTimestamp>
+        <serviceUpTimestamp>1475776959823</serviceUpTimestamp>
+      </leaseInfo>
+      <metadata class="java.util.Collections$EmptyMap"/>
+      <homePageUrl>http://dorchester.ny.pivotallabs.com:9001/</homePageUrl>
+      <statusPageUrl>http://dorchester.ny.pivotallabs.com:9001/info</statusPageUrl>
+      <healthCheckUrl>http://dorchester.ny.pivotallabs.com:9001/health</healthCheckUrl>
+      <vipAddress>cookie</vipAddress>
+      <secureVipAddress>cookie</secureVipAddress>
+      <isCoordinatingDiscoveryServer>false</isCoordinatingDiscoveryServer>
+      <lastUpdatedTimestamp>1475776960333</lastUpdatedTimestamp>
+      <lastDirtyTimestamp>1475776959796</lastDirtyTimestamp>
+      <actionType>ADDED</actionType>
+    </instance>
+  </application>
+  <application>
+    <name>CRUNCHER</name>
+    <instance>
+      <instanceId>dorchester.ny.pivotallabs.com:cruncher:9001</instanceId>
+      <hostName>dorchester.ny.pivotallabs.com</hostName>
+      <app>CRUNCHER</app>
+      <ipAddr>10.56.2.21</ipAddr>
+      <status>DOWN</status>
+      <overriddenstatus>UNKNOWN</overriddenstatus>
+      <port enabled="true">9001</port>
+      <securePort enabled="false">443</securePort>
+      <countryId>1</countryId>
+      <dataCenterInfo class="com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo">
+        <name>MyOwn</name>
+      </dataCenterInfo>
+      <leaseInfo>
+        <renewalIntervalInSecs>30</renewalIntervalInSecs>
+        <durationInSecs>90</durationInSecs>
+        <registrationTimestamp>1475776940832</registrationTimestamp>
+        <lastRenewalTimestamp>1475776940832</lastRenewalTimestamp>
+        <evictionTimestamp>0</evictionTimestamp>
+        <serviceUpTimestamp>0</serviceUpTimestamp>
+      </leaseInfo>
+      <metadata class="java.util.Collections$EmptyMap"/>
+      <homePageUrl>http://dorchester.ny.pivotallabs.com:9001/</homePageUrl>
+      <statusPageUrl>http://dorchester.ny.pivotallabs.com:9001/info</statusPageUrl>
+      <healthCheckUrl>http://dorchester.ny.pivotallabs.com:9001/health</healthCheckUrl>
+      <vipAddress>cruncher</vipAddress>
+      <secureVipAddress>cruncher</secureVipAddress>
+      <isCoordinatingDiscoveryServer>false</isCoordinatingDiscoveryServer>
+      <lastUpdatedTimestamp>1475776940832</lastUpdatedTimestamp>
+      <lastDirtyTimestamp>1475776940316</lastDirtyTimestamp>
+      <actionType>ADDED</actionType>
+    </instance>
+    <instance>
+      <instanceId>dorchester.ny.pivotallabs.com:cruncher:9000</instanceId>
+      <hostName>dorchester.ny.pivotallabs.com</hostName>
+      <app>CRUNCHER</app>
+      <ipAddr>10.56.2.21</ipAddr>
+      <status>UP</status>
+      <overriddenstatus>UNKNOWN</overriddenstatus>
+      <port enabled="true">9000</port>
+      <securePort enabled="false">443</securePort>
+      <countryId>1</countryId>
+      <dataCenterInfo class="com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo">
+        <name>MyOwn</name>
+      </dataCenterInfo>
+      <leaseInfo>
+        <renewalIntervalInSecs>30</renewalIntervalInSecs>
+        <durationInSecs>90</durationInSecs>
+        <registrationTimestamp>1475776646849</registrationTimestamp>
+        <lastRenewalTimestamp>1475777066711</lastRenewalTimestamp>
+        <evictionTimestamp>0</evictionTimestamp>
+        <serviceUpTimestamp>1475776646252</serviceUpTimestamp>
+      </leaseInfo>
+      <metadata class="java.util.Collections$EmptyMap"/>
+      <homePageUrl>http://dorchester.ny.pivotallabs.com:9000/</homePageUrl>
+      <statusPageUrl>http://dorchester.ny.pivotallabs.com:9000/info</statusPageUrl>
+      <healthCheckUrl>http://dorchester.ny.pivotallabs.com:9000/health</healthCheckUrl>
+      <vipAddress>cruncher</vipAddress>
+      <secureVipAddress>cruncher</secureVipAddress>
+      <isCoordinatingDiscoveryServer>false</isCoordinatingDiscoveryServer>
+      <lastUpdatedTimestamp>1475776646849</lastUpdatedTimestamp>
+      <lastDirtyTimestamp>1475776646151</lastDirtyTimestamp>
+      <actionType>ADDED</actionType>
+    </instance>
+  </application>
+</applications>
