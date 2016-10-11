@@ -16,3 +16,7 @@ shards:
     github: luislavena/radix
     version: 0.3.1
 
+  to-xml:
+    github: dgodd/to-xml
+    commit: da773da5ab82d561e45c8b554b41a20bcd9e71c0
+

@@ -9,3 +9,5 @@ license: MIT
 dependencies:
   kemal:
     github: sdogruyol/kemal
+  to-xml:
+    github: dgodd/to-xml
