@@ -16,11 +16,15 @@ TODO: Write usage instructions here
 
 ## Development
 
-TODO: Write development instructions here
+To run on default eureka port
+```
+crystal run src/eureka.cr -- -p 8761
+```
+
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/eureka/fork )
+1. Fork it ( https://github.com/dgodd/eureka/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -28,4 +32,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Steel Toe Team - creator, maintainer
+- [dgodd](https://github.com/dgodd) Dave Goddard - creator, maintainer

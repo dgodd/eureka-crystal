@@ -2,11 +2,10 @@ name: eureka
 version: 0.1.0
 
 authors:
-  - Steel Toe Team <steeltoe@pivotal.io>
+  - Dave Goddard <dave@goddard.id.au>
 
 license: MIT
 
 dependencies:
   kemal:
     github: sdogruyol/kemal
-    branch: master

@@ -10,7 +10,7 @@ require "xml"
 # Code: 204 on success
 post "/eureka/apps/:appID" do |env|
   p env.params.json["instance"]
-  puts env.params.json["instance"].to_xml
+  puts env.params.json["instance"].to_s
   env.response.status_code = 204
 end
 
