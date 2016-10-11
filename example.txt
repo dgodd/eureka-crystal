@@ -1,3 +1,34 @@
+# Running crystal server and pointing the java client at it
+
+{"instanceId" => "dorchester.ny.pivotallabs.com:cookie:9001", "hostName" => "dorchester.ny.pivotallabs.com", "app" => "COOKIE", "ipAddr" => "10.56.2.21", "status" => "UP", "overriddenstatus" => "UNKNOWN", "port" => {"$" => 9001, "@enabled" => "true"}, "securePort" => {"$" => 443, "@enabled" => "false"}, "countryId" => 1, "dataCenterInfo" => {"@class" => "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo", "name" => "MyOwn"}, "leaseInfo" => {"renewalIntervalInSecs" => 30, "durationInSecs" => 90, "registrationTimestamp" => 0, "lastRenewalTimestamp" => 0, "evictionTimestamp" => 0, "serviceUpTimestamp" => 0}, "metadata" => {"@class" => "java.util.Collections$EmptyMap"}, "homePageUrl" => "http://dorchester.ny.pivotallabs.com:9001/", "statusPageUrl" => "http://dorchester.ny.pivotallabs.com:9001/info", "healthCheckUrl" => "http://dorchester.ny.pivotallabs.com:9001/health", "vipAddress" => "cookie", "secureVipAddress" => "cookie", "isCoordinatingDiscoveryServer" => "false", "lastUpdatedTimestamp" => "1476197369948", "lastDirtyTimestamp" => "1476197370542"}
+{"instanceId" => "dorchester.ny.pivotallabs.com:cookie:9001", "hostName" => "dorchester.ny.pivotallabs.com", "app" => "COOKIE", "ipAddr" => "10.56.2.21", "status" => "UP", "overriddenstatus" => "UNKNOWN", "port" => {"$" => 9001, "@enabled" => "true"}, "securePort" => {"$" => 443, "@enabled" => "false"}, "countryId" => 1, "dataCenterInfo" => {"@class" => "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo", "name" => "MyOwn"}, "leaseInfo" => {"renewalIntervalInSecs" => 30, "durationInSecs" => 90, "registrationTimestamp" => 0, "lastRenewalTimestamp" => 0, "evictionTimestamp" => 0, "serviceUpTimestamp" => 0}, "metadata" => {"@class" => "java.util.Collections$EmptyMap"}, "homePageUrl" => "http://dorchester.ny.pivotallabs.com:9001/", "statusPageUrl" => "http://dorchester.ny.pivotallabs.com:9001/info", "healthCheckUrl" => "http://dorchester.ny.pivotallabs.com:9001/health", "vipAddress" => "cookie", "secureVipAddress" => "cookie", "isCoordinatingDiscoveryServer" => "false", "lastUpdatedTimestamp" => "1476197369948", "lastDirtyTimestamp" => "1476197370542"}
+2016-10-11 10:49:30 -0400 204 POST /eureka/apps/COOKIE 842.0µs
+2016-10-11 10:50:00 -0400 200 GET /eureka/apps/ 39.0µs
+2016-10-11 10:50:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 29.0µs
+2016-10-11 10:50:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 51.0µs
+2016-10-11 10:50:30 -0400 200 GET /eureka/apps/ 39.0µs
+2016-10-11 10:50:30 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 42.0µs
+2016-10-11 10:51:00 -0400 200 GET /eureka/apps/ 43.0µs
+2016-10-11 10:51:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 27.0µs
+2016-10-11 10:51:30 -0400 200 GET /eureka/apps/ 84.0µs
+2016-10-11 10:51:30 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 30.0µs
+2016-10-11 10:52:00 -0400 200 GET /eureka/apps/ 53.0µs
+2016-10-11 10:52:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 29.0µs
+2016-10-11 10:52:30 -0400 200 GET /eureka/apps/ 50.0µs
+2016-10-11 10:52:30 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 20.0µs
+2016-10-11 10:53:00 -0400 200 GET /eureka/apps/ 379.0µs
+2016-10-11 10:53:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 26.0µs
+2016-10-11 10:53:30 -0400 200 GET /eureka/apps/ 53.0µs
+2016-10-11 10:53:30 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 23.0µs
+2016-10-11 10:54:00 -0400 200 GET /eureka/apps/ 58.0µs
+2016-10-11 10:54:00 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 52.0µs
+2016-10-11 10:54:30 -0400 200 GET /eureka/apps/ 80.0µs
+2016-10-11 10:54:30 -0400 200 PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476197370542 53.0µs
+
+
+
+# Running the Java server and requesting `/eureka/apps` endpoint (after setting multiple clients at it)
+
  2016-10-06 14:03:27 ☆  |2.3.1| dorchester in ~/Downloads/eureka-client
 ○ → curl -i localhost:8761/eureka/apps
 HTTP/1.1 200
