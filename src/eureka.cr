@@ -10,9 +10,6 @@ all_apps = Hash(String, Hash(String, JSON::Type)).new
 # Input: JSON/XML payload HTTP
 # Code: 204 on success
 post "/eureka/apps/:appID" do |env|
-  p env.params.json["instance"]
-  puts env.params.json["instance"].to_s
-
   instance = env.params.json["instance"]
   if instance.is_a?(Hash)
     instanceId = instance.fetch("instanceId").to_s
@@ -29,10 +26,28 @@ post "/eureka/apps/:appID" do |env|
 end
 
 delete "/eureka/apps/:appID/:instanceID" do |env|
+  appID = env.params.url["appID"]
+  instanceID = env.params.url["instanceID"]
+
+  instances = all_apps.fetch(appID, nil)
+  instances.delete(instanceID) if instances
+
   env.response.status_code = 200
 end
 
+## PUT /eureka/apps/COOKIE/dorchester.ny.pivotallabs.com:cookie:9001?status=UP&lastDirtyTimestamp=1476707380570
 put "/eureka/apps/:appID/:instanceID" do |env|
+  appID = env.params.url["appID"]
+  instanceID = env.params.url["instanceID"]
+
+  instances = all_apps.fetch(appID, nil)
+  instance = instances.fetch(instanceID, nil) if instances
+  ## TODO: Check -- <lastDirtyTimestamp>1476707380570</lastDirtyTimestamp>
+  ## https://github.com/Netflix/eureka/blob/4f24d9dcf90713b421f6c092fa63e707cbf74df3/eureka-core/src/main/java/com/netflix/eureka/resources/InstanceResource.java#L122
+
+  ## Necessary
+  ## https://github.com/Netflix/eureka/blob/4f24d9dcf90713b421f6c092fa63e707cbf74df3/eureka-core/src/main/java/com/netflix/eureka/registry/AbstractInstanceRegistry.java#L345
+
   env.response.status_code = 200
 end
 
@@ -62,6 +77,8 @@ end
 put "/eureka/apps/:appID/:instanceID/status" do |env|
   ## ?value=OUT_OF_SERVICE
   ## ?value=UP
+  p env.params.json # ["instance"]
+
   env.response.status_code = 200
 end
 
